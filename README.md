@@ -1,3 +1,5 @@
+![KEY — Reality Execution Kernel](assets/key-promo.svg)
+
 # KEY — Reality Execution Kernel
 
 > **Build worlds. Execute reality. Redefine software.**
