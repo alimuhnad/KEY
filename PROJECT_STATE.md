@@ -8,8 +8,10 @@
 - Repository: `alimuhnad/KEY`
 - Target: Windows x64 native execution
 - Public status: Research / active development
-- Current verified roadmap baseline: **v0.4.0 — Immutable World Snapshot Capture**
-- Next candidate: **v0.4.1 — Immutable World Snapshot Fork**
+- Current verified roadmap baseline: **v0.4.4 — Fork Transaction Receipt**
+- Next candidate: **v0.4.5 — Fork-Local WorldVersion Envelope**
+- Baseline status: **VERIFIED**
+- Cumulative acceptance result: **1,800 checks passed**
 
 ## Verified development direction
 
@@ -34,6 +36,26 @@ KEY has verified implementation slices covering:
 - Authority Decision Evidence and Explanation
 - Authority-enforced transaction and replay publication path
 - Immutable World Snapshot Capture
+- Immutable World Snapshot Fork
+- Fork-local immutable state derivation
+- Fork-local bounded multi-change transaction
+- Immutable Fork Transaction Receipt
+
+## Current fork path
+
+```text
+World Snapshot
+      ↓
+Immutable Fork Root
+      ↓
+Fork-Local State Derivation
+      ↓
+Fork-Local Transaction
+      ↓
+Fork Transaction Receipt
+      ↓
+Fork-Local WorldVersion Envelope   ← next
+```
 
 ## Explicit limitations
 
@@ -45,8 +67,9 @@ Still incomplete or future work includes:
 - Full source language coverage
 - Production compiler/runtime integration
 - Compiler root discovery for GC
+- Automatic production GC integration
 - Full Rules / Knowledge / Evidence kernels
-- Snapshot Fork and Simulation stack
+- Remaining Fork / Simulation / Compare / Merge stack
 - Persistence and crash recovery
 - Standard library
 - Tooling maturity
