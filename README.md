@@ -59,7 +59,7 @@ These are intended to be execution semantics, not merely application-level conve
 
 ## Current Development Status
 
-**Current verified roadmap baseline: v0.4.0 — Immutable World Snapshot Capture**
+**Current verified roadmap baseline: v0.4.4 — Fork Transaction Receipt**
 
 The project has progressed through verified micro-versions covering:
 
@@ -88,10 +88,16 @@ The project has progressed through verified micro-versions covering:
 - Authority-enforced WorldVersion publication
 - Authority-enforced Time, Events, Event Logs, Causality and Replay
 - Immutable World Snapshot Capture
+- Immutable World Snapshot Fork
+- Fork-local immutable state derivation
+- Fork-local multi-change transaction
+- Immutable Fork Transaction Receipt
+
+**Current cumulative verification: 1,800 checks passed at v0.4.4.**
 
 The next roadmap target is:
 
-**v0.4.1 — Immutable World Snapshot Fork**
+**v0.4.5 — Fork-Local WorldVersion Envelope**
 
 ---
 
