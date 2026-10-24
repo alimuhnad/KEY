@@ -1,14 +1,14 @@
-![KEY ? Reality Execution Kernel](assets/key-promo.svg)
+![KEY — Reality Execution Kernel](assets/key-promo.svg)
 
-# KEY ? Native programming language
+# KEY — Native programming language
 
-Created by **Ali Muhnad ? ??? ????**, Baghdad, Iraq.
+Created by **Ali Muhnad — علي مهند**, Baghdad, Iraq.
 
 **KEY Core 1.0.0-rc.1 for Windows x64 is available as a proprietary binary release candidate.** The compiler and command-line tools build native EXE, DLL and COFF/OBJ. Compiler implementation sources remain private.
 
 ## Download and start
 
-[**Download KEY Core Binary 1.0.0-rc.1 ? Windows x64**](distributions/1.0.0-rc.1/KEY-Core-Binary-1.0.0-rc.1-windows-x64.zip?raw=true) ? [SHA256](distributions/1.0.0-rc.1/KEY-Core-Binary-1.0.0-rc.1-windows-x64.zip.sha256) ? [???? ????????? ????????](distributions/1.0.0-rc.1/USER_GUIDE_AR.md)
+[**Download KEY Core Binary 1.0.0-rc.1 — Windows x64**](distributions/1.0.0-rc.1/KEY-Core-Binary-1.0.0-rc.1-windows-x64.zip?raw=true) · [SHA256](distributions/1.0.0-rc.1/KEY-Core-Binary-1.0.0-rc.1-windows-x64.zip.sha256) · [دليل الاستخدام بالعربية](distributions/1.0.0-rc.1/USER_GUIDE_AR.md)
 
 Extract the ZIP into a writable directory and open a terminal there:
 
@@ -25,7 +25,7 @@ The package contains the compiler, native command-line tools, nine example sourc
 
 KEY Core includes explicit type/function generics, tagged enums and exhaustive match, immutable UTF-8 Text, modules, ownership and borrows, destructors, transactional worlds, and a defined Windows foreign interface. Commands include build, run, check, test and fmt.
 
-[Distribution overview](distributions/1.0.0-rc.1/README.md) ? [Browse examples](distributions/1.0.0-rc.1/examples) ? [Validation and limits](distributions/1.0.0-rc.1/VALIDATION.md)
+[Distribution overview](distributions/1.0.0-rc.1/README.md) · [Browse examples](distributions/1.0.0-rc.1/examples) · [Validation and limits](distributions/1.0.0-rc.1/VALIDATION.md)
 
 ## License
 
@@ -45,8 +45,8 @@ The broader Reality Execution Kernel vision and its earlier roadmap are preserve
 
 ## Creator and contact
 
-**Ali Muhnad ? ??? ????**  
-M.Sc. Electrical and Computer Engineering ? Baghdad, Iraq  
-GitHub: [@alimuhnad](https://github.com/alimuhnad) ? Email: **alimuhnad72@gmail.com**
+**Ali Muhnad — علي مهند**  
+M.Sc. Electrical and Computer Engineering · Baghdad, Iraq  
+GitHub: [@alimuhnad](https://github.com/alimuhnad) · Email: **alimuhnad72@gmail.com**
 
-Copyright ? 2026 Ali Muhnad. All rights reserved except the permissions explicitly granted for the binary distribution and its examples.
+Copyright © 2026 Ali Muhnad. All rights reserved except the permissions explicitly granted for the binary distribution and its examples.
