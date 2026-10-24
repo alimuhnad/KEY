@@ -2,6 +2,8 @@
 
 Copyright (c) 2026 Ali Muhnad. All rights reserved.
 
+The official KEY Core Binary package, its example programs and its user documentation under `distributions/1.0.0-rc.1/` have the specific permissions stated in [distributions/1.0.0-rc.1/LICENSE.md](distributions/1.0.0-rc.1/LICENSE.md). That limited binary-use and example permission is an explicit exception to this general notice; it does not grant a license to the compiler implementation.
+
 This repository is publicly viewable for project presentation, technical discussion,
 evaluation, collaboration, and investment outreach.
 

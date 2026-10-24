@@ -1,77 +1,14 @@
-# Project State
+# Current project state
 
-## KEY — Reality Execution Kernel
+Public delivery: **KEY Core 1.0.0-rc.1, Windows x64, binary edition**.
 
-- Creator: **Ali Muhnad (علي مهند)**
-- Location: Baghdad, Iraq
-- Degree: M.Sc. Electrical and Computer Engineering
-- Repository: `alimuhnad/KEY`
-- Target: Windows x64 native execution
-- Public status: Research / active development
-- Current verified roadmap baseline: **v0.4.4 — Fork Transaction Receipt**
-- Next candidate: **v0.4.5 — Fork-Local WorldVersion Envelope**
-- Baseline status: **VERIFIED**
-- Cumulative acceptance result: **1,800 checks passed**
+- Distribution: [distributions/1.0.0-rc.1/](distributions/1.0.0-rc.1/README.md).
+- Publication policy: proprietary binaries, selected examples and user documentation; implementation source remains private.
+- Compiler/tool implementation is self-hosted internally. Ordinary public use needs the supplied Windows binaries.
+- Candidate validation: 1,276 native language/application/tool cases; one 1,800.003-second Core 1 process with 297,609,000 iterations. Separate matrix, ABI, fuzz and memory evidence is summarized in the distribution.
+- Public archive: 12 extracted-package checks passed; five packaging allowlist regressions passed.
+- Stable approval: **BLOCKED** pending independent reviews and unresolved historical soak investigations.
+- Publisher signing: not configured.
+- No standard library, network library, GUI, package manager or broad multi-platform support is claimed.
 
-## Verified development direction
-
-KEY has verified implementation slices covering:
-
-- Systems IR encoding and verification
-- Windows x64 native PE emission
-- Scalar values and checked arithmetic
-- Generation-checked references
-- Native heap pages
-- Precise graph tracing and live sweep
-- Initial source grammar and typed semantic IR
-- First bounded source-to-native compiler slice
-- World / Entity / Immutable State
-- Atomic Transactions and Receipts
-- WorldVersion Lineage
-- Explicit Time and Temporal Lineage
-- World Events and Event Logs
-- Event Causality Graph
-- Deterministic Replay
-- Authority Grants / Revocations / Decisions
-- Authority Decision Evidence and Explanation
-- Authority-enforced transaction and replay publication path
-- Immutable World Snapshot Capture
-- Immutable World Snapshot Fork
-- Fork-local immutable state derivation
-- Fork-local bounded multi-change transaction
-- Immutable Fork Transaction Receipt
-
-## Current fork path
-
-```text
-World Snapshot
-      ↓
-Immutable Fork Root
-      ↓
-Fork-Local State Derivation
-      ↓
-Fork-Local Transaction
-      ↓
-Fork Transaction Receipt
-      ↓
-Fork-Local WorldVersion Envelope   ← next
-```
-
-## Explicit limitations
-
-The project is **not yet a finished general-purpose language**.
-
-Still incomplete or future work includes:
-
-- General typed-IR-to-native lowering
-- Full source language coverage
-- Production compiler/runtime integration
-- Compiler root discovery for GC
-- Automatic production GC integration
-- Full Rules / Knowledge / Evidence kernels
-- Remaining Fork / Simulation / Compare / Merge stack
-- Persistence and crash recovery
-- Standard library
-- Tooling maturity
-- Self-hosting
-- Multi-platform backends
+The earlier v0.4.4 Reality Kernel roadmap and its 1,800-check claim are historical project records, not this candidate's acceptance count. See [the preserved public profile](docs/history/PROJECT_PROFILE_before_Core1.md).

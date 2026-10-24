@@ -1,3 +1,7 @@
+# Historical architecture roadmap
+
+The roadmap below preserves the previously published Reality Kernel milestones and broader architecture vision. It is not the feature contract for the Core 1 binary candidate. See [the current distribution](distributions/1.0.0-rc.1/README.md) and its [validation and limits](distributions/1.0.0-rc.1/VALIDATION.md) for what is delivered.
+
 # KEY Roadmap
 
 KEY is developed in small verified increments. Each micro-version has a single objective and must pass its acceptance target before advancement.

@@ -8,6 +8,10 @@ KEY — Reality Execution Kernel is an independent project created and developed
 Copyright protects the original source code, written specifications, diagrams,
 documentation, graphics, and other original expression in this repository.
 
+## Authorized Core 1 binary publication
+
+The owner has authorized publication of the KEY Core Binary 1.0.0-rc.1 executables, selected example programs, and user documentation under `distributions/1.0.0-rc.1/`. Their limited use permissions are in that distribution's LICENSE.md. Compiler implementation sources, generator inputs, private build scripts, internal test harnesses and development archives remain outside the public distribution.
+
 ## Public repository scope
 
 This public repository is intended to present the project, roadmap, architecture
