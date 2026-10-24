@@ -1,132 +1,27 @@
-# Historical architecture roadmap
+# KEY roadmap
 
-The roadmap below preserves the previously published Reality Kernel milestones and broader architecture vision. It is not the feature contract for the Core 1 binary candidate. See [the current distribution](distributions/1.0.0-rc.1/README.md) and its [validation and limits](distributions/1.0.0-rc.1/VALIDATION.md) for what is delivered.
+The current public release is **KEY Core 1.0.0-rc.1 for Windows x64**. This roadmap describes the priorities for moving the candidate toward a stable release. It is a direction of work, not a promise of dates or features already delivered.
 
-# KEY Roadmap
+## Current foundation
 
-KEY is developed in small verified increments. Each micro-version has a single objective and must pass its acceptance target before advancement.
+The binary edition includes a native compiler, command-line tools, selected language examples and an inventory demonstration. It supports EXE, DLL and COFF/OBJ output, explicit generics, tagged enums, modules, UTF-8 text, ownership and transactional worlds.
 
-**Verified through: v0.4.4**  
-**Next candidate: v0.4.5 — Fork-Local WorldVersion Envelope**
+The compiler and development tools are self-hosted internally. Public users run the supplied binaries. See the [distribution guide](distributions/1.0.0-rc.1/README.md) for installation and the [validation summary](distributions/1.0.0-rc.1/VALIDATION.md) for tested scope.
 
-## 0.0.x — Native foundation
-- Systems IR and verifier
-- Windows x64 native emitter
-- Values and references
-- Native heap
-- Precise tracing / live sweep
-- Lexer / parser / typed IR
-- First bounded source-to-native slice
+## Priorities before a stable release
 
-## 0.1.x — World / Entity / State / Transactions
-- World identity
-- Entity identity registry
-- Immutable entity state
-- Atomic state transition
-- Bounded multi-change transaction
-- Provenance receipt
-- WorldVersion envelope
-- WorldVersion lineage / lineage chain
+| Priority | Work | Evidence needed |
+|---|---|---|
+| Reliability | Investigate the two unresolved long-running failures and extend persistence and recovery testing | Reproducible findings, documented fixes where required, and repeated runs with retained failure evidence |
+| Independent review | Review ownership, security boundaries and native ABI behavior | Findings resolved and independent signoffs recorded |
+| Platform coverage | Expand testing across the supported Windows environments | A documented platform matrix and reproducible package checks |
+| Distribution | Establish publisher signing and review the delivery process | Verified signed artifacts and documented installation and update procedures |
+| Developer experience | Refine diagnostics and documentation using reported programs | Clear examples and regression coverage for confirmed defects |
 
-## 0.2.x — Time / Events / Causality / Replay
-- Explicit Time
-- Commit Time binding
-- Temporal lineage / temporal chain
-- World Event / Event Log
-- Causal link / causal graph
-- Deterministic replay plan
-- Replay cursor
+Stable approval remains pending until the release requirements are satisfied. A successful test campaign alone does not close an unresolved investigation.
 
-## 0.3.x — Authority-enforced execution path
-- Grants
-- Operation permits
-- Revocations
-- Multi-revocation decisions
-- Decision evidence / evidence log
-- Deterministic decision explanation
-- Authority-enforced transaction
-- Authority-enforced receipt
-- Authority-enforced WorldVersion
-- Authority-enforced commit Time
-- Authority-enforced World Event
-- Authority-enforced Event Log append
-- Authority-enforced causal link
-- Authority-enforced causal graph
-- Authority-enforced replay plan
-- Authority-enforced replay cursor
-- Authority-enforced replay first step
-- Authority-enforced replay completion
+## Direction after Core 1
 
-## 0.4.x — Snapshot / Fork / Simulation
+Standard-library coverage, networking, package management, editor tooling and additional platforms are candidates for future work. Their scope and order will be chosen from concrete application needs and validation results. They are not included in the current distribution.
 
-Verified:
-
-- **v0.4.0** — Immutable World Snapshot Capture
-- **v0.4.1** — Immutable World Snapshot Fork
-- **v0.4.2** — Fork-Local Immutable State Derivation
-- **v0.4.3** — Fork-Local Multi-Change Transaction
-- **v0.4.4** — Fork Transaction Receipt
-
-Next:
-
-- **v0.4.5** — Fork-Local WorldVersion Envelope
-
-Remaining direction:
-
-- Fork-local version lineage
-- Fork isolation verification
-- Effect replay
-- Simulation
-- World comparison
-- Merge
-- Conflict reporting
-
-## 0.5.x — Persistence / Recovery / Historical Explanation
-
-Planned:
-
-- Canonical persistence format
-- Commit / history log
-- Truncation and corruption detection
-- Recovery
-- Historical explanation
-
-## 0.x — Language completion
-
-Planned:
-
-- General native compiler
-- General typed-IR-to-KISA lowering
-- Standard library
-- Tooling
-- Production runtime integration
-- Self-hosting
-- Bootstrap fixed-point evidence
-
-## 1.0 — Closed Reality Kernel 1.0
-
-The 1.0 scope is complete only when every mandatory subsystem is implemented and verified together.
-
-Target integrated concepts include:
-
-- World
-- Entity / Identity
-- Immutable State
-- Relations
-- Transactions
-- Time
-- Bitemporal History
-- Events
-- Causality
-- Rules
-- Constraints / Invariants
-- Knowledge / Evidence
-- Authority
-- Snapshot / Fork
-- Replay
-- Simulation
-- Comparison / Merge
-- Persistence
-- Historical Explanation
-
-Security, determinism, resource bounds, and provenance are cross-cutting requirements throughout development.
+Propose a use case through [GitHub Issues](https://github.com/alimuhnad/KEY/issues/new/choose). Include a small program or workflow, its current limitation and the behavior you need.

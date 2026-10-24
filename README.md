@@ -1,52 +1,82 @@
-![KEY — Reality Execution Kernel](assets/key-promo.svg)
+# KEY
 
-# KEY — Native programming language
+**A native programming language for Windows x64.**
+
+KEY combines explicit ownership, typed programming and transactional worlds with direct native code generation. Its compiler produces Windows executables, dynamic libraries and COFF object files. The compiler and development tools are written in KEY and maintained through an internal self-hosted build process.
 
 Created by **Ali Muhnad — علي مهند**, Baghdad, Iraq.
 
-**KEY Core 1.0.0-rc.1 for Windows x64 is available as a proprietary binary release candidate.** The compiler and command-line tools build native EXE, DLL and COFF/OBJ. Compiler implementation sources remain private.
+[**Download for Windows x64**](distributions/1.0.0-rc.1/KEY-Core-Binary-1.0.0-rc.1-windows-x64.zip?raw=true) · [Getting started](distributions/1.0.0-rc.1/README.md) · [دليل الاستخدام بالعربية](distributions/1.0.0-rc.1/USER_GUIDE_AR.md) · [Examples](distributions/1.0.0-rc.1/examples)
 
-## Download and start
+## Current release
 
-[**Download KEY Core Binary 1.0.0-rc.1 — Windows x64**](distributions/1.0.0-rc.1/KEY-Core-Binary-1.0.0-rc.1-windows-x64.zip?raw=true) · [SHA256](distributions/1.0.0-rc.1/KEY-Core-Binary-1.0.0-rc.1-windows-x64.zip.sha256) · [دليل الاستخدام بالعربية](distributions/1.0.0-rc.1/USER_GUIDE_AR.md)
+| | KEY Core |
+|---|---|
+| Version | **1.0.0-rc.1** |
+| Platform | Windows x64 |
+| Status | Experimental release candidate |
+| Distribution | Compiler, command-line tools, examples and inventory demo |
+| License | Proprietary; free use for learning and application development under the [binary license](distributions/1.0.0-rc.1/LICENSE.md) |
 
-Extract the ZIP into a writable directory and open a terminal there:
+This repository distributes the public binary edition and its documentation. Compiler implementation sources and development inputs remain private. The candidate is available for evaluation; stable production approval remains pending.
 
-```bat
-key.cmd version
-key.cmd test
-key.cmd run examples\core1\text.key
-key.cmd build examples\core1\generics.key -o example.exe
+## Language and toolchain
+
+| Area | Available in Core 1 |
+|---|---|
+| Native output | EXE, DLL and COFF/OBJ for Windows x64 |
+| Types | Structs, explicit type and function generics, tagged enums and exhaustive statement matching |
+| Resources | Affine ownership, borrowing and destructors |
+| Text | Immutable UTF-8 text with byte indexing |
+| Organization | Modules, imports and public declarations |
+| State | Transactional worlds and resource transfers |
+| Interoperability | Windows foreign-function interface within the supported ABI contracts |
+| Tools | Build, run, check, test and format commands |
+
+Ordinary EXE and direct DLL builds run with the supplied tools, without Python, C++, LLVM, an assembler or an external linker. Linking a COFF object into a foreign host uses that host's linker.
+
+Use the candidate to explore native command-line programs, typed data models, resource management and transactional state. The included inventory application demonstrates transfers, persistence and restart recovery with test data.
+
+## Get started
+
+Download the ZIP, extract it into a writable directory and open PowerShell in that directory:
+
+```powershell
+.\key.cmd version
+.\key.cmd test
+.\key.cmd run examples\core1\text.key
+.\key.cmd build examples\core1\generics.key -o example.exe
+.\example.exe
 ```
 
-The package contains the compiler, native command-line tools, nine example source files (eight runnable smoke examples plus their imported module), an inventory demo, documentation, and file hashes. It runs without Python, C++, LLVM, an assembler or external linker for ordinary EXE/direct DLL builds. Foreign-host OBJ linking requires the host's linker.
+The text example prints UTF-8 text. The generics example checks its results with assertions and exits successfully without printing output.
 
-## What you can use
+To try the inventory demo, run `.\inventory.cmd` and follow the [Arabic walkthrough](distributions/1.0.0-rc.1/USER_GUIDE_AR.md). The package includes nine example source files: eight runnable examples and one imported module.
 
-KEY Core includes explicit type/function generics, tagged enums and exhaustive match, immutable UTF-8 Text, modules, ownership and borrows, destructors, transactional worlds, and a defined Windows foreign interface. Commands include build, run, check, test and fmt.
+The download's [SHA256 checksum](distributions/1.0.0-rc.1/KEY-Core-Binary-1.0.0-rc.1-windows-x64.zip.sha256) and the archive's file manifest let you check file integrity. The binaries are currently unsigned.
 
-[Distribution overview](distributions/1.0.0-rc.1/README.md) · [Browse examples](distributions/1.0.0-rc.1/examples) · [Validation and limits](distributions/1.0.0-rc.1/VALIDATION.md)
+## Validation and release scope
+
+The matching compiler passed **1,276 native language, application and tool cases**. A continuous Core 1 run completed **30 minutes and 297,609,000 iterations**. The public archive passed **12 extracted-package checks**, with **five additional packaging allowlist regressions**.
+
+These results describe the tested candidate. Independent reviews and two investigations from earlier long-running workloads remain open. Full evidence summaries and known limitations are documented in [Validation and limits](distributions/1.0.0-rc.1/VALIDATION.md).
+
+Core 1 does not bundle a standard library, networking library, GUI framework or package manager. General concurrency, a general exception model and support for other operating systems are outside this release. See the [roadmap](ROADMAP.md) for current priorities.
 
 ## License
 
-The [KEY Core Binary Distribution License](distributions/1.0.0-rc.1/LICENSE.md) permits free use for learning and application development, including commercial applications. You may distribute your compiled applications with the runtime code embedded by KEY, and adapt the supplied examples under the stated terms. KEY compiler/tool executables themselves cannot be redistributed or modified without additional permission. **This is not an open-source release.**
+The [KEY Core Binary Distribution License](distributions/1.0.0-rc.1/LICENSE.md) permits free use for learning and application development, including commercial applications. It also permits distribution of your compiled applications with their embedded KEY runtime and adaptation of the supplied examples under its terms.
 
-## Candidate status
+Redistributing or modifying the compiler and development tools requires additional permission. KEY is proprietary. The [repository license](LICENSE.md) and [ownership notice](IP_NOTICE.md) cover the remaining project materials.
 
-**Experimental release candidate; stable production approval remains blocked.** The matching compiler passed 1,276 native cases and a measured 30-minute Core 1 campaign. The binary-only ZIP additionally passed 12 extracted-package checks, including the eight example programs, compilation, imports, formatting and inventory save/restart. Five allowlist regressions check that private source or the developer archive cannot enter the public package.
+## Feedback and contact
 
-Independent release review and two historical soak investigations remain open. The binaries are unsigned. Read the detailed limits before use. No standard library, network library, GUI or package manager is bundled.
+Submit reproducible, non-sensitive defects through [GitHub Issues](https://github.com/alimuhnad/KEY/issues/new/choose). Include the KEY version, compiler SHA256, Windows version, exact command, minimal example and full diagnostic. Feature proposals should describe a concrete program and the behavior it needs.
 
-## Feedback and project direction
+For sensitive reports, follow the [security reporting policy](SECURITY.md).
 
-[Report a non-sensitive bug](https://github.com/alimuhnad/KEY/issues/new/choose), including the version, compiler SHA256, Windows version, command, small reproducer and actual diagnostic. For sensitive reports use the owner's contact below and [SECURITY.md](SECURITY.md).
+**Ali Muhnad — علي مهند**, creator and principal developer · Baghdad, Iraq.
 
-The broader Reality Execution Kernel vision and its earlier roadmap are preserved in [the historical project profile](docs/history/PROJECT_PROFILE_before_Core1.md) and [ROADMAP.md](ROADMAP.md). Their milestones and check counts are separate from this Core 1 candidate's evidence.
+[@alimuhnad](https://github.com/alimuhnad) · [alimuhnad72@gmail.com](mailto:alimuhnad72@gmail.com)
 
-## Creator and contact
-
-**Ali Muhnad — علي مهند**  
-M.Sc. Electrical and Computer Engineering · Baghdad, Iraq  
-GitHub: [@alimuhnad](https://github.com/alimuhnad) · Email: **alimuhnad72@gmail.com**
-
-Copyright © 2026 Ali Muhnad. All rights reserved except the permissions explicitly granted for the binary distribution and its examples.
+Copyright © 2026 Ali Muhnad. All rights reserved except as expressly granted in the applicable license.
